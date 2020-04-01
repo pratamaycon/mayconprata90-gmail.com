@@ -11,19 +11,17 @@ import { Observable, of as observableOf, Subject } from 'rxjs';
 })
 export class TopoComponent implements OnInit {
 
-  public response: Observable<Oferta[]>;
-  public ofertas: Oferta[];
+  public ofertas: Observable<Oferta[]>;
   private subjectPesquisa: Subject<string> = new Subject<string>();
 
   constructor(private ofertasService: OfertasService) { }
 
   ngOnInit(): void {
-    this.response = this.subjectPesquisa
+    this.ofertas = this.subjectPesquisa
         .pipe(
         debounceTime(1000), // executa a ação do switchMap após um 1s
         distinctUntilChanged(), // para fazer pesquisas distintas
         catchError((error: any) => {
-          console.log(error);
           return observableOf<Oferta[]>([]);
         }),
         switchMap( (termo: string) => {
@@ -37,16 +35,14 @@ export class TopoComponent implements OnInit {
           return this.ofertasService.pesquisarOfertas(termo);
         })
       );
-
-    this.response.subscribe( (ofertas: Oferta[]) => {
-      console.log(ofertas);
-      this.ofertas = ofertas;
-    });
   }
 
    public pesquisa(termoDaBusca: string): void {
-      console.log('keyup caractere', termoDaBusca);
       this.subjectPesquisa.next(termoDaBusca);
+  }
+
+  public limpaPesquisa() {
+    this.subjectPesquisa.next('');
   }
 
 }
