@@ -218,6 +218,60 @@
       "complemento": "Casa",
       "formaPagamento": "debito",
       "id": 5
+    },
+    {
+      "endereco": "dsadas",
+      "complemento": "das",
+      "formaPagamento": "dinheiro",
+      "id": 6
+    },
+    {
+      "endereco": "sadas",
+      "complemento": "dasdas",
+      "formaPagamento": "debito",
+      "id": 7
+    },
+    {
+      "endereco": "dadasdas",
+      "complemento": "dasdas",
+      "formaPagamento": "dinheiro",
+      "id": 8
+    },
+    {
+      "endereco": "sadsa",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 1,
+          "img": {
+            "url": "/assets/ofertas/1/img1.jpg"
+          },
+          "titulo": "Super Burger",
+          "descricao": "Rodízio de Mini-hambúrger com opção de entrada.",
+          "valor": 29.9,
+          "quantidade": 3
+        }
+      ],
+      "id": 9
+    },
+    {
+      "endereco": "dasdas",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 4,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          },
+          "titulo": "Estância das águas",
+          "descricao": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 1
+        }
+      ],
+      "id": 10
     }
   ]
 }
