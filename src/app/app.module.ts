@@ -2,7 +2,7 @@ import { ROUTES } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
@@ -42,6 +42,7 @@ registerLocaleData(localePt);
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [
