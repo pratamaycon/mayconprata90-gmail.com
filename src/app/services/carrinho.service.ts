@@ -1,7 +1,6 @@
 import { Oferta } from './../models/oferta.model';
 import { Injectable } from '@angular/core';
 import ItemCarrinho from '../models/item-carrinho.model';
-import { Operator } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -65,7 +64,7 @@ export class CarrinhoService {
 
   }
 
-  public limparCarrinho(): void{
+  public limparCarrinho(): void {
     this.itens = [];
   }
 

@@ -4,7 +4,7 @@
       <h5>Sua Compra</h5>
       <hr />
 
-      <div *ngIf="carrinhoService.exibirItens().length; else carrinhoVazio">
+      <div *ngIf="getCarrinhoService().exibirItens().length; else carrinhoVazio">
         <div
           *ngFor="let item of itensCarrinho"
           class="form-row"
@@ -51,7 +51,7 @@
             <h4>
               Total do pedido:
               {{
-                carrinhoService.totalCarrinhoCompras() | currency: "BRL":true
+                getCarrinhoService().totalCarrinhoCompras() | currency: "BRL":true
               }}
             </h4>
           </div>
